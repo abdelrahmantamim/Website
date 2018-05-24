@@ -1712,13 +1712,15 @@
 			background: #f00;
 		}
 		.image.avatar60{
-			width:60px;
-			height:60px;
+			width:75px;
+			height:75px;
 			background: #f00;
+			position: static;
 		}
 		.image.avatar60	img{
-			width: 60px;
-			height: 60px;
+			width: 75px;
+			height: 75px;
+			position: static;
 		}
 
 			.image.avatar48 img {
@@ -1751,7 +1753,12 @@
 				margin: 0 auto;
 				width: auto;
 			}
-
+			.center {
+			    display: block;
+			    margin-left: auto;
+			    margin-right: auto;
+			    
+			}
 /* List */
 
 	ul.default {
