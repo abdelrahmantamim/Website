@@ -45,7 +45,7 @@
 	}
 
 	body {
-		-webkit-text-size-adjust: none;
+		text-size-adjust: none;
 	}
 
 /* Box Model */
@@ -1810,7 +1810,7 @@
 	form select,
 	form textarea {
 		position: relative;
-		-webkit-appearance: none;
+		appearance: none;
 		display: block;
 		border: 0;
 		outline: 0;
@@ -2280,7 +2280,7 @@
 			}
 
 			#main > section.three {
-				background-color: #ecf1f1;
+				background-color: #81918E;
 			}
 
 			#main > section.four {
