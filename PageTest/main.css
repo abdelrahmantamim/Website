@@ -1,0 +1,118 @@
+  /********************** Global Styles************************************/
+  html {
+    box-sizing: border-box;
+    background-color:#4f275a;
+  }
+  body{
+    max-width: 100%;
+    margin: 0 auto;
+    padding: 10px;
+    overflow: auto;
+    font-size: 26px;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+  h1{
+    text-transform:uppercase;
+    color:white;
+  }
+  header{
+    font-size:140%;
+    color:white;
+    background-color:#783e8a;
+  }
+  p{
+    border-bottom:rgba(0,0,0,.05) 5px solid;
+    position: relative;
+    margin-left: 5px;
+    margin-top: 10px;
+  }
+  main{
+    background-color:#f0ecec;
+  }
+
+/********** Grid setting **********/
+.container {
+    font-size: 24px;
+    margin-bottom: 500px;
+        /* min-width: height 900px; */
+
+  }
+  /* clear floats */
+  .container:before, .container:after {
+    content: " ";
+    display: table;
+  }
+  .container:after {
+    clear: both;
+  }
+  
+  .section {
+      clear: both;
+      padding: 0px;
+      margin: 0px;
+  }
+  
+  /*  GROUPING  */
+  .group:before,
+  .group:after { content:""; display:table; }
+  .group:after { clear:both;}
+  .group { zoom:1; /*For IE 6/7*/ } 
+   
+  
+  /* Column styles */
+  .col {
+    float: left;
+  }
+  .col:first-child { margin-left: 0; }
+
+  
+/* block spans 1 column (100 % 6) */
+.col-1 {
+  width: 16.66%; 
+}
+/* block spans 2 columns */
+.col-2 {
+  width: 33.33%; 
+}
+/* block spans 3 columns */
+.col-3 {
+  width: 48%; 
+  margin: 5px;
+}
+/* block spans 4 columns */
+.col-4 {
+  width: 66.66%; 
+}
+/* block spans 5 columns */
+.col-5 {
+  width: 83.33%; 
+}
+/* block spans 6 (all) columns */
+.col-6 {
+  width: 100%; 
+}
+  
+/***********Identifiers*********/
+  .name{
+    text-transform: uppercase;
+  }
+  
+  .ssn{
+    color:#8b8b8b;
+    text-transform: uppercase;
+  }
+
+  .small{
+    text-transform:lowercase;
+  }
+  .large{
+    text-transform: uppercase;
+  }
+
+/*******Media Queries*******/
+  @media only screen and (min-width: 400px) and (max-width:1090px) {
+    .col {  margin: 1% 0 1% 0%; }
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6 { width: 100%; }
+  }
