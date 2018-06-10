@@ -2,6 +2,7 @@
   html {
     box-sizing: border-box;
     background-color:#4f275a;
+    font-family: Arial, Helvetica, sans-serif;
   }
   body{
     max-width: 100%;
