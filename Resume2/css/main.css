@@ -75,9 +75,11 @@ header h1, header h2{
 }
 
 .download{
-  position: absolute;
-  bottom: 0;
-  right: 0;
+  position: relative;
+  top: 76px;
+  right: 0px;
+  /* left:420px */
+  
 }
 
 /*Footer*/
