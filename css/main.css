@@ -66,8 +66,24 @@ header{
   padding-top: 50px;
   position: relative;
 }
+#lefty{
+    animation-name: movinLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+#righty{
+    animation-name: movinLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+#droppy{
+  animation: movinLeft 1s ease-out;
+}
+
 .profile-img{
   border-radius: 50%;
+    animation: topDrop 3s ease-out;
+
 }
 header h1, header h2{
   color: #EDF2F4;
@@ -159,4 +175,50 @@ p+h3{
   .profile-img{
     width:200px;
   }
+}
+
+/**********KeyFrame************/
+
+@keyframes movinLeft{
+    0% {
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+
+    80%{
+        transform: translateX(10px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes movinRight{
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+
+    80%{
+        transform: translateX(1rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes topDrop{
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0);
+    }
 }
