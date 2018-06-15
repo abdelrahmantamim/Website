@@ -32,13 +32,14 @@ a{
   color: #EF233C;
 }
 
+
 a:hover{
   text-decoration: none;
 }
 
 .content-wrap{
-  max-width: 950px;
-  margin: 0 auto;
+  max-width: 100vh;
+  margin: auto auto;
   padding: 60px 50px;
   overflow: auto;
 }
@@ -46,14 +47,6 @@ a:hover{
   text-transform: uppercase;
 }
 
-.btn{
-  border-radius: 5%;
-  text-decoration: none;
-  background: #EF233C;
-  color: white;
-  padding: 10px;
-  display: inline-block;
-}
 
 
 /******** Header & Footer ******/
@@ -66,37 +59,12 @@ header{
   padding-top: 50px;
   position: relative;
 }
-#lefty{
-    animation-name: movinLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-#righty{
-    animation-name: movinLeft;
-    animation-duration: 1s;
-    animation-timing-function: ease-out;
-}
-#droppy{
-  animation: movinLeft 1s ease-out;
-}
 
-.profile-img{
-  border-radius: 50%;
-    animation: topDrop 3s ease-out;
-
-}
 header h1, header h2{
   color: #EDF2F4;
   margin: 0;
 }
 
-.download{
-  position: relative;
-  top: 76px;
-  right: 0px;
-  /* left:420px */
-  
-}
 
 /*Footer*/
 footer{
@@ -122,6 +90,9 @@ nav a{
   text-decoration: none;
   text-transform: uppercase;
   font-weight: 700;
+}
+nav a:visited{
+  text-decoration: none;
 }
 
 
@@ -166,6 +137,26 @@ p+h3{
     float: left;
     padding-left: 20px;
     }
+    #lefty{
+      animation-name: movinLeft;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+  }
+  #righty{
+      animation-name: movinRight;
+      animation-duration: 1s;
+      animation-timing-function: ease-out;
+  }
+  #droppy{
+    animation: movinLeft 1s ease-out;
+  }
+  
+  .profile-img{
+    border-radius: 50%;
+      animation: movinBottom 2s ease-out;
+  
+  }
+
 }
 
 @media (max-width:909px){
@@ -177,20 +168,20 @@ p+h3{
   }
 }
 
-/**********KeyFrame************/
+/**********Animations************/
 
 @keyframes movinLeft{
     0% {
         opacity: 0;
-        transform: translateX(-100px);
+        transform: translateX(-90px);
     }
 
     55%{
-        transform: translateX(10px);
+        transform: translateX(9px);
     }
 
 	80%{
-        transform: translateX(-10px);
+        transform: translateX(-9px);
     }
     100% {
         opacity: 1;
@@ -201,11 +192,11 @@ p+h3{
 @keyframes movinRight{
     0% {
         opacity: 0;
-        transform: translateX(10rem);
+        transform: translateX(2.8rem);
     }
 
     80%{
-        transform: translateX(1rem);
+        transform: translateX(-.23rem);
     }
 
     100% {
@@ -214,14 +205,79 @@ p+h3{
     }
 }
 
-@keyframes topDrop{
+@keyframes movinBottom{
     0% {
         opacity: 0;
-        transform: translateY(20px);
+        transform: translateY(14px);
     }
 
     100% {
         opacity: 1;
         transform: translate(0);
     }
+}
+
+@keyframes movinBottombtn{
+  0% {
+      opacity: 0;
+      transform: translateY(8px);
+  }
+
+  100% {
+      opacity: 1;
+      transform: translate(0);
+  }
+}
+/**************** Button configurations ******************/
+.btn:link,.btn:visited {
+  display: inline-block;
+  text-transform: uppercase;
+  text-decoration: none;
+  padding: 15px 40px;
+  border-radius: 100px;
+  transition: all .2s;
+  position: relative;
+  top: 60px;
+}
+
+.btn:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0,0,0,.2);
+}
+
+.btn:active{
+  transform: translateY(-1px);
+  box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+
+.btn-white{
+  color:#777;
+  background-color:white;
+}
+
+.btn::after{
+  content: "";
+  display: inline-block;
+  height: 100%;
+  width: 100%;
+  border-radius: 100px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  transition: all .4s;
+}
+
+.btn-white::after{
+  background-color: #fff;
+}
+
+.btn:hover::after{
+  transform: scaleX(1.4) scaleY(1.6);
+  opacity: 0;
+}
+
+.btn-animated{
+  animation: movinBottombtn .5s ease-out .75s;
+  animation-fill-mode: backwards;
 }
