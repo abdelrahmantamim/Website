@@ -39,8 +39,8 @@ a:hover{
 
 .content-wrap{
   max-width: 100vh;
-  margin: auto auto;
-  padding: 60px 50px;
+  margin: 0 auto;
+  padding: 60px 40px;
   overflow: auto;
 }
 .uppercase{
@@ -164,6 +164,7 @@ p+h3{
     text-align: center;
   }
   .profile-img{
+    border-radius: 50%;
     width:200px;
   }
 }
